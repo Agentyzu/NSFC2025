@@ -4,9 +4,9 @@
 
 为验证申请人对项目中提出的多LLM社区协同与竞争均衡求解的可行性，初步考虑广告商规模为2的两两之间LLM广告位竞拍，以此证明竞价均衡策略的存在性。均衡存在性的证明保证了本项目研究的可行性。
 
-**定理：**两个广告商在竞争LLM广告索引过程中存在均衡竞价策略$S^*$。
+定理：两个广告商在竞争LLM广告索引过程中存在均衡竞价策略$S^*$。
 
-**证明：**本项目定义广告商集合为$ADV = \{ 1,2,\cdots,n \}$，任取两个广告商$i$和$j$，二者对LLM广告索引的估值分别为$v_{i}$和$v_{j}$，报价分别为$b_{i}$和$b_{j}$，根据贝特兰德模型[^1]，两个广告商的需求广告索引数量为$q\left( b_{i},b_{j} \right) = a - b_{i} + cb_{j}$，其中，$c$为市场价格系数，此时广告商$i$的收益函数表示为$\pi_{i}\left( b_{i},b_{j} \right) = q\left( b_{i},b_{j} \right)\left( v_{i} - b_{i} \right) = \left( a - b_{i} + cb_{j} \right)\left( v_{i} - b_{i} \right)$。针对变量$p_{i}$，对广告商收益函数进行求导，可得$\partial\pi_{i}\left( b_{i},b_{j} \right)/\partial b_{i} = - a - v_{i} + 2b_{i} - cb_{j}$。令$\partial\pi_{i}\left( b_{i},b_{j} \right)/\partial b_{i} = 0$，则$b_{i} = (a + v_{i} + cb_{j})/2$。同理，对于广告商$j$，其竞价博弈均衡报价为$b_{j} = ( - a + cv_{j} + b_{i})/2c$。因此，可以得到广告商报价$b_{i}$和$b_{j}$报价关系如图所示。
+证明：本项目定义广告商集合为$ADV = \left\{ 1,2,\cdots,n \right\}$，任取两个广告商$i$和$j$，二者对LLM广告索引的估值分别为$v_{i}$和$v_{j}$，报价分别为$b_{i}$和$b_{j}$，根据贝特兰德模型[^1]，两个广告商的需求广告索引数量为$q\left( b_{i},b_{j} \right) = a - b_{i} + cb_{j}$，其中，$c$为市场价格系数，此时广告商$i$的收益函数表示为$\pi_{i}\left( b_{i},b_{j} \right) = q\left( b_{i},b_{j} \right)\left( v_{i} - b_{i} \right) = \left( a - b_{i} + cb_{j} \right)\left( v_{i} - b_{i} \right)$。针对变量$p_{i}$，对广告商收益函数进行求导，可得$\partial\pi_{i}\left( b_{i},b_{j} \right)/\partial b_{i} = - a - v_{i} + 2b_{i} - cb_{j}$。令$\partial\pi_{i}\left( b_{i},b_{j} \right)/\partial b_{i} = 0$，则$b_{i} = (a + v_{i} + cb_{j})/2$。同理，对于广告商$j$，其竞价博弈均衡报价为$b_{j} = ( - a + cv_{j} + b_{i})/2c$。因此，可以得到广告商报价$b_{i}$和$b_{j}$报价关系如图所示。
 
 <img src="/figure/fig1.png" alt="image-20240223184020867" style="zoom: 25%;" />
 
